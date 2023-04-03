@@ -1,0 +1,23 @@
+body {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+h1 {
+  color: black;
+}
+table {
+  font-family: calibiri, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: lightblue;
+  border: 1px solid;
+  text-align: left;
+  padding: 8px;
+}
+td {
+  background-color: white;
+  border: 1px solid;
+  text-align: left;
+  padding: 8px;
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyGraph", "DependencyGraph\DependencyGraph.csproj", "{6AE3A355-3A7A-444F-B7EA-C56C39963AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyGraphTests", "DependencyGraphTests\DependencyGraphTests.csproj", "{64357F92-C2CF-48EF-BB27-CEF5662B06E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AE3A355-3A7A-444F-B7EA-C56C39963AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE3A355-3A7A-444F-B7EA-C56C39963AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE3A355-3A7A-444F-B7EA-C56C39963AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE3A355-3A7A-444F-B7EA-C56C39963AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64357F92-C2CF-48EF-BB27-CEF5662B06E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64357F92-C2CF-48EF-BB27-CEF5662B06E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64357F92-C2CF-48EF-BB27-CEF5662B06E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64357F92-C2CF-48EF-BB27-CEF5662B06E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EAB07A5-01E9-4984-B48E-4D858776C4EC}
+	EndGlobalSection
+EndGlobal

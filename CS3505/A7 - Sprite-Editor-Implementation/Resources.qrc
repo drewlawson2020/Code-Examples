@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Source/rsc">
+        <file>Source/rsc/eraserIcon.ico</file>
+        <file>Source/rsc/brush.ico</file>
+        <file>Source/rsc/stamp.ico</file>
+        <file>Source/rsc/playpause.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/ANDGate.png</file>
+        <file>Resources/NANDGate.png</file>
+        <file>Resources/NOTGate.png</file>
+        <file>Resources/ORGate.png</file>
+        <file>Resources/XORGate.png</file>
+        <file>Resources/bb.png</file>
+        <file>Resources/bjarne.gif</file>
+        <file>Resources/InputOffGate.png</file>
+        <file>Resources/InputOnGate.png</file>
+        <file>Resources/OutputOnGate.png</file>
+        <file>Resources/OutputOffGate.png</file>
+    </qresource>
+</RCC>
