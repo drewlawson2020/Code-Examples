@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<meta charset="utf-8">
+<html>
+    {% include 'header.html' %} 
+    <main>
+        
+                <h1>{{assignments.title}}</h1>
+                <p>Due {{assignments.deadline}}, total of {{assignments.points}} point{{assignments.points|pluralize}}</p>
+                {% if user >= 2 %}
+                <div class="info_box">
+                    <p>Currently {{submissions.count|default:"0"}} / {{assignments.num_students}} submissions </p>
+                    <p> {{submissions.count}} submission{{submissions.count|pluralize}} assigned to you <a href="/{{assignments.id}}/submissions" title="Submission Page" class="right_leaning_text">Grade</a></p>
+                </div>
+                {% elif user == 1 %}
+                <div class="info_box">
+                     {% if submissions != None and assignments.get_pastdue and submissions.score != None %} 
+                     <p>Your submission, <a href ="/uploads/{{submissions.file}}">{{submissions.file}}</a>, received {{submissions.score}}/{{assignments.points}} ({{submissions.get_percentage}})</p>
+                     {% elif submissions != None and assignments.get_pastdue and submissions.score == None %}
+                     <p>Your submission, <a href ="/uploads/{{submissions.file}}">{{submissions.file}}</a>, is being graded</p>
+                     {% elif submissions != None and assignments.get_datetime %}
+
+                     <p>Your current submission is <a href ="/uploads/{{submissions.file}}">{{submissions.file}}</a></p>
+                     <form  action="/{{assignments.id}}/submit" method ="post" enctype="multipart/form-data">
+                    {% csrf_token %}   
+                        <input type="file" id="file" name="file" required>
+                        <input type="submit" value="Submit">
+
+
+                     {% elif submissions == None and assignments.get_pastdue %}
+                     <p>You did not submit this assignment and received 0 points</p>
+                     {% else %}
+                     <p>No current submission</p>
+                     <form  action="/{{assignments.id}}/submit" method ="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                         <input type="file" id="file" name="file" required> 
+                         <input type="submit" value="Submit">
+                         </form>
+                     
+                     {% endif %}
+                </div>
+                {% endif %}
+                <h2>Description</h2>
+                <div class= "description">
+                    {{assignments.description|safe}}
+        </div>
+        <script type="module">
+            import { $ } from "/static/jquery/src/jquery.js";
+            import { make_form_async } from "/static/main.js";
+            make_form_async($("form"));
+        </script>
+        </form>
+    </main>
+    </body>
+</html>

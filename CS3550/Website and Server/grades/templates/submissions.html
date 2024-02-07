@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    {% include 'header.html' %} 
+    <main class="profile">
+            <h1>{{assignments.title}}</h1>
+            <h4>All grades out of {{assignments.points}}</h4>
+            <table>
+                <thead>
+                    <th>Student</th>
+                    <th>Submission</th>
+                    <th class="sortable">Grade</th>
+                </thead>
+                <form  action="/{{assignments.id}}/grade" method ="post">
+                {% for submission in submissions %}
+                {% csrf_token %}
+                <tr data-index ={{ forloop.counter }}>
+                    <td>{{submission.author}}</td>
+                    <td><a href="/uploads/{{submission.file}}">Submission</a></td>
+                    <td class= "weight"><input name="grade-{{submission.id}}" value="{{submission.score}}" title="Grade"></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td><button>Submit</button></td>
+                    <td><a href="/profile/" title="Back to assignments">Back to assignments</a></td>
+                </tr>
+            </form>
+            </table>
+    </main>
+</body>
+</html>

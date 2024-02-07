@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    {% include 'header.html' %} 
+    <main class= "login">
+            <h1>Log In</h1>
+                <output name="error" id="error">{{error}}</output>
+                <form class="login_form" action="/profile/login/" method ="post">
+                {% csrf_token %}
+                <p>
+                    <div class="username-group">
+                        <label for="username">Username:</label>
+                        <input autofocus type="text" id="username" name="username" required maxlength="32" size="30" />
+                    </div>
+                </p>
+                <p>
+                    <div class="password-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required maxlength="32" size="30" />
+                    </div>
+                </p>
+                <input type="hidden" id="next" name="next" value={{next}} />
+                <td><button>Login</button></td>
+            </form>
+      </main>
+</body>
+</html>

@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+ font-family: 'Verdana', sans-serif;
+ font-family: 'IBM Plex Sans', sans-serif;
+ line-height: 1.25rem;
+ padding: 0;
+ margin: 0;
+}
+
+p
+{
+	padding: 1rem;
+}
+title {
+	font-size: 1.50rem;
+}
+table {
+ 	line-height: 1.50rem;
+	width: 100%;
+	text-align: left;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+h1
+{
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	border-bottom: solid;
+	border-color: gray;
+}
+.description
+{
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+
+}
+.description ul
+{
+	padding: 1rem;
+	padding-left: 3rem;
+ 	margin: 0rem;
+}
+.description li
+{
+	padding: 0rem;
+ 	margin: 0rem;
+}
+ code {
+ font-family: 'Courier New', monospace;
+ font-family: 'IBM Plex Mono', monospace;
+ }
+ 
+
+.navbar {
+	background-color: #ddd; 
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: calc((100% - 50rem) / 2);
+	padding-right: calc((100% - 50rem) / 2);
+	display: flex;
+	justify-content:left;
+	box-shadow: 0px 0px 5px 0px gray;
+}
+.navbar .cs3550_title
+{
+	padding-left: 0;
+	padding-right: 0;
+	display:flex;
+	justify-content:left;
+}
+.navbar a
+{
+	margin-left: 1rem;
+}
+.navbar a + a
+{
+	margin-left: auto;
+}
+main {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: calc((100% - 50rem) / 2);
+	padding-right: calc((100% - 50rem) / 2);
+}
+
+.navbar a:link {
+	font-size: 1.25rem;
+	font-weight: normal;
+	text-decoration: none;
+	color: gray;
+}
+
+.navbar a:visited {
+	font-size: 1.25rem;
+	font-weight: normal;
+	text-decoration: none;
+	color: gray;
+}
+.navbar a:hover {
+	font-size: 1.25rem;
+	font-weight: normal;
+	text-decoration-line: underline;
+	color: gray;
+}
+.navbar a:active
+{
+	color: black;
+}
+
+.cs3550_title
+{
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: black;
+}
+
+.info_box {
+  background-color: #b1c3de;
+  border: 1px solid #204a87;
+  margin: 1rem;
+}
+
+.login_form 
+{
+	font-size: 1.25rem;
+	display:inline-block;
+	justify-content: center;
+}
+.login_form label
+{
+	width: 25rem;
+	text-align: left;
+	padding-right: 25rem;
+	font-size: 1.25rem;
+}
+.login_form p
+{
+	padding: 0rem;
+	
+}
+.login_form input
+{
+	margin:1rem;
+}
+.login button
+{
+	width: 25rem;
+	height: 2rem;
+	font-size: 1.25rem;
+	margin-left:12rem;
+	
+}
+.description
+{
+	padding: 1rem;
+}
+
+.right_leaning_text
+{
+	text-align: right;
+	float: right;
+}
+.weight
+{
+ text-align: right;
+}
+
+.sortable + .sortable
+{
+ text-align: right;
+}
+
+.sortable:last-of-type
+{
+ text-align: right;
+}
+
+img
+{
+	padding: 1rem;
+}
+output
+{
+	color:red;
+}
+th.sortable { cursor: pointer; }
+th.sort-asc::after { content: " \25b2"; }
+th.sort-desc::after { content: " \25bc"; }

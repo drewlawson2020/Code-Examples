@@ -1,0 +1,16 @@
+<head>
+    <title>CS3550 Assignments</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="cs3550_title">CS3550</div>
+        <a href="/" title="Assignments Page">Assignments</a>
+        <a href="/profile" title="Profile Page">Profile</a>
+    </nav>
+    <script type="module">
+        import { $ } from "/static/jquery/src/jquery.js";
+        import { make_table_sortable } from "/static/main.js";
+        make_table_sortable($("table"));
+    </script>

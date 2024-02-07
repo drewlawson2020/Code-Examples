@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    {% include 'header.html' %} 
+    <main class="profile">
+            <h1>Your Grades</h1>
+            <div class="info_box">
+                <p>Currently logged in as {{request.user}}. <a href="/profile/logout/" title="Login Page" class = "right_leaning_text">Log out</a></p>
+            </div>
+            <table>
+                <thead>
+                    <th>Assignment</th>
+                {% if isStudent %}
+                <th class="sortable">Score</th>
+                </thead>
+                {% for key, value in dictionary.items %}
+                <tr data-index ={{ forloop.counter }}>
+                    <td><a href="/{{key.id}}/"> {{key.title}}</a></td>
+                    {% if key.get_datetime %}
+                    <td class= "weight" data-weight = {{ key.weight }}  data-value="Not Due">Not Due</td>
+                    {% else %}
+                    <td class= "weight" data-weight = {{ key.weight }} data-value= {{ value }}> {{ value }} </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                    <tr>
+                        <th>Final grade</th>
+                        <th class= "weight">{{totalScore}}</th>
+                    </tr>
+                    <script type="module">
+                        import { $ } from "/static/jquery/src/jquery.js";
+                        import { make_grade_hypothesized } from "/static/main.js";
+                        make_grade_hypothesized($("table"));
+                    </script>
+                {% else %}
+                <th class="sortable">Graded</th>
+                </thead>
+                {% for key, value in dictionary.items %}
+                <tr data-index ={{ forloop.counter }}>
+                    <td><a href="/{{key.id}}/submissions"> {{key.title}}</a></td>
+                    {% if key.get_datetime %}
+                    <td class= "weight">Not Due</td>
+                    {% else %}
+                    <td class= "weight" data-value= {{ value }} > {{ value }} </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                {% endif %}
+
+                
+            </table>
+    </main>
+</body>
+</html>
