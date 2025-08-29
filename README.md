@@ -4,5 +4,6 @@ These are projects that I have worked on from Spring 2020 to Fall of 2022 that a
 - CS 2420 is for Intro Alg & Data Struct and uses Java
 - CS 3500 is for Software Practice and uses C#
 - CS 3505 is for Software Practice II and uses C++ and Qt
-
-Please note that using this code or sharing this code with non-approved users is against the University of Utah's policies as I cannot share or distribute this code publicly.
+- CS 4440 is for Introduction to Computer Security, and uses C
+- CS 4550 is for Web Software Development II and uses React/Javascript as the frontend, and Python as the backend.
+Please note that using this code or sharing using this code is against the University of Utah's policies on cheating or plagarism, and can result in academic sanctions, which could lead to failure in the class you use this code in, or expulsion from the university entirely. Trust me, you're better off learning this on your own than copying from me, not worth the trouble.
